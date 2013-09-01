@@ -7,9 +7,18 @@ baseurl: "http://samargulies.github.io/shy-boyz/"
 exclude:
   - .gitignore
   - README.md
+  
+translations:
+  en:
+    news: "News"
+    footer-text: "&copy; MMXIII Shy Way Entertainment"
+  bg:
+    news: "Новини"
+    footer-text: "&copy; MMXIII Shy Way забавление"
 
 # Prose settings
 prose:
   media: "assets/img"
   rooturl: "_posts"
   siteurl: "http://samargulies.github.io/shy-boyz/"
+  

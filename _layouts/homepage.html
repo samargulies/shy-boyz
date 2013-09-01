@@ -1,47 +1,19 @@
-<!doctype html>
-<html>
-<head>
-	<title>Shy Boyz</title>
-	
-	<meta charset="utf8" />
-	<meta viewport="width=device-width" />
-	<script type="text/javascript" src="//use.typekit.net/twh5lzi.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-	
-	<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
-</head>
-<body>
-	<div class="page">
-		<header class="page-header">
-			<h1><a href="/"><img src="{{ site.baseurl }}/assets/img/shy-boyz-logo.png" alt="Shy Boyz"></a></h1>
-			<!-- <div id="ansi-logo"></div> -->
-			<!-- <nav>
-				<ul>
-					<li>Home</li>
-					<li>Music</li>
-					<li>Videos</li>
-				</ul>
-			</nav> -->
-			<div class="language-selector">
-			<a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/img/flag-bulgaria.gif"></a>
-			<a href="{{ site.baseurl }}/en"><img src="{{ site.baseurl }}/assets/img/flag-usa.gif"></a>
-			</div>
-		</header>
-		
-		{{ page.content }}
-		
-		<footer class="page-footer">
-			<p>&copy; MMXIII Shy Corp.</p>
-		</footer>
-	</div>
-	
-<!-- 	<script src="/assets/js/escapes.js"></script>
-	<script>
-		escapes('/assets/img{{ site.baseurl }}-logo.ans', function () {
-			var logoElement = document.getElementById('ansi-logo');
-			logoElement.appendChild(this);
-		}, {});
-	</script>
--->
-</body>
-</html>
+---
+layout: default
+---
+{% assign t = site.translations %}
+
+<section class="news">
+	<h1>{{ t.[page.lang].news}}</h1>
+			
+    {% for post in site.posts %}
+		{% if post.lang == page.lang %}
+	      <article>
+			  <h2>{{ post.title }}</h2>
+			  {{ post.content }}
+		  </article>
+		{% endif %}
+    {% endfor %}
+</section>
+
+{{ page.content }}
