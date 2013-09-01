@@ -2,6 +2,7 @@ name: Shy Boyz
 markdown: redcarpet
 pygments: true
 permalink: /:categories/:title
+baseurl: "http://samargulies.github.io/shy-boyz/"
 
 exclude:
   - .gitignore
@@ -11,4 +12,4 @@ exclude:
 prose:
   media: "assets/img"
   rooturl: "_posts"
-  siteurl: "http://samargulies.github.io/shyboyz/"
+  siteurl: "http://samargulies.github.io/shy-boyz/"
