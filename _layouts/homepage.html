@@ -5,16 +5,15 @@
 	
 	<meta charset="utf8" />
 	<meta viewport="width=device-width" />
-	
 	<script type="text/javascript" src="//use.typekit.net/twh5lzi.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	
-	<link rel="stylesheet" href="/assets/css/style.css" />
+	<link rel="stylesheet" href="{{ site.url }}/assets/css/style.css" />
 </head>
 <body>
 	<div class="page">
 		<header class="page-header">
-			<h1><a href="/"><img src="/assets/img/shy-boyz-logo.png" alt="Shy Boyz"></a></h1>
+			<h1><a href="/"><img src="{{ site.url }}/assets/img/shy-boyz-logo.png" alt="Shy Boyz"></a></h1>
 			<!-- <div id="ansi-logo"></div> -->
 			<!-- <nav>
 				<ul>
@@ -24,8 +23,8 @@
 				</ul>
 			</nav> -->
 			<div class="language-selector">
-			<a href="/"><img src="/assets/img/flag-bulgaria.gif"></a>
-			<a href="/en"><img src="/assets/img/flag-usa.gif"></a>
+			<a href="{{ site.url }}/"><img src="{{ site.url }}/assets/img/flag-bulgaria.gif"></a>
+			<a href="{{ site.url }}/en"><img src="{{ site.url }}/assets/img/flag-usa.gif"></a>
 			</div>
 		</header>
 		
@@ -36,12 +35,13 @@
 		</footer>
 	</div>
 	
-	<script src="/assets/js/escapes.js"></script>
+<!-- 	<script src="/assets/js/escapes.js"></script>
 	<script>
 		escapes('/assets/img/shy-boyz-logo.ans', function () {
 			var logoElement = document.getElementById('ansi-logo');
 			logoElement.appendChild(this);
 		}, {});
 	</script>
+-->
 </body>
 </html>
