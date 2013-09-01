@@ -1,0 +1,14 @@
+name: Shy Boyz
+markdown: redcarpet
+pygments: true
+permalink: /:categories/:title
+
+exclude:
+  - .gitignore
+  - README.md
+
+# Prose settings
+prose:
+  media: "assets/img"
+  rooturl: "_posts"
+  siteurl: "http://samargulies.github.io/shyboyz/"
