@@ -407,17 +407,16 @@ table {
 }
 
 @-webkit-keyframes rainbow {
-	50% { background-size: .00001%; }
+	50% { background-size: .00001%;	background-position:0 0; }
 }
 @keyframes rainbow {
-	50% { background-size: .00001%; }
+	50% { background-size: .00001%; background-position:0 0; }
 }
 
 body {
 	padding: 0;
-	font-family: monospace;
+	font-family: sans-serif;
 	line-height: 1.6;
-	
 	background: -moz-linear-gradient(top, #ff0000 0%, #ffff00 15%, #00ff00 30%, #00ffff 50%, #0000ff 65%, #ff00ff 80%, #ff0000 100%);
 	background: -webkit-linear-gradient(top, #ff0000 0%,#ffff00 15%,#00ff00 30%,#00ffff 50%,#0000ff 65%,#ff00ff 80%,#ff0000 100%);
 	background: -o-linear-gradient(top, #ff0000 0%,#ffff00 15%,#00ff00 30%,#00ffff 50%,#0000ff 65%,#ff00ff 80%,#ff0000 100%);
@@ -426,16 +425,20 @@ body {
 	
 	background-size: 200%;
 	
-	-webkit-transition: background 30s ease-in;
-	
 	-webkit-animation: rainbow 30s infinite;
-	 		animation: rainbow 20s infinite;
+	 		animation: rainbow 30s infinite;	
+	
 }
+
 
 .page {
 	max-width: 640px;
-	margin: 0 auto;
-/*	background: #f3f3f3;*/
+	margin: 0 auto;	
+	
+	background: #444 url('../img/background.png') 0 10000px;
+
+	-webkit-animation: rainbow 200s infinite;
+	 		animation: rainbow 200s infinite;
 }
 
 .page-header h1 {
@@ -478,8 +481,7 @@ section {
 section h1 {
 	font-family: 'baroque-text', georgia, serif;
 	font-size: 4em;
-/*	color: white;*/
-/*	background: #f3f3f3;*/
+	text-shadow: -1px 1px hsla(0, 100%, 100%, 0.4);
 	font-weight: normal;
 	text-align: center;
 	margin-top: -100px;
@@ -514,6 +516,7 @@ img {
 em {
 	font-family: 'baroque-text', georgia, serif;
 	color: red;
+	font-style: normal;
 }
 
 
