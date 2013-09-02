@@ -7,7 +7,8 @@ baseurl: "http://samargulies.github.io/shy-boyz/"
 exclude:
   - .gitignore
   - README.md
-  
+ 
+# Localized Phrases
 translations:
   en:
     news: "News"
@@ -20,5 +21,5 @@ translations:
 prose:
   media: "assets/img"
   rooturl: "_posts"
-  siteurl: "http://samargulies.github.io/shy-boyz/"
+  siteurl: "http://samargulies.github.io/shy-boyz"
   
