@@ -415,7 +415,7 @@ table {
 
 body {
 	padding: 0;
-	font-family: sans-serif;
+	font-family: menlo, monospace;
 	line-height: 1.6;
 	background: -moz-linear-gradient(top, #ff0000 0%, #ffff00 15%, #00ff00 30%, #00ffff 50%, #0000ff 65%, #ff00ff 80%, #ff0000 100%);
 	background: -webkit-linear-gradient(top, #ff0000 0%,#ffff00 15%,#00ff00 30%,#00ffff 50%,#0000ff 65%,#ff00ff 80%,#ff0000 100%);
@@ -435,7 +435,7 @@ body {
 	max-width: 640px;
 	margin: 0 auto;	
 	
-	background: #444 url('../img/background.png') 0 10000px;
+	background: url('../img/background.png') 0 10000px;
 
 	-webkit-animation: rainbow 200s infinite;
 	 		animation: rainbow 200s infinite;
@@ -472,19 +472,21 @@ nav li {
 
 section {
 	background: #f3f3f3;
-	background: hsla(0, 0%, 95%, .8);
+	background: hsla(0, 0%, 95%, .7);
+	box-shadow: inset 0 0 20px hsl(0, 0%, 58%);
+	border: 6px inset rosybrown;
 	padding: 20px;
-	margin-top: 120px;
+	margin-top: 148px;
 	margin-bottom: 20px;
 }
 
 section h1 {
-	font-family: 'baroque-text', georgia, serif;
+	font-family: 'baroque-text', courier, 'courier new', monospace;
 	font-size: 4em;
 	text-shadow: -1px 1px hsla(0, 100%, 100%, 0.4);
 	font-weight: normal;
 	text-align: center;
-	margin-top: -100px;
+	margin-top: -128px;
 	margin-bottom: 0;
 }
 
@@ -514,11 +516,24 @@ img {
 }
 
 em {
-	font-family: 'baroque-text', georgia, serif;
+	font-family: 'baroque-text', fantasy;
 	color: red;
 	font-style: normal;
+	font-size: 1.2em;
 }
 
+h2 {
+	font-family: courier, 'courier new', monospace;
+	font-weight: normal;
+	font-size: 1.7em;
+}
+
+time {
+	float: left;
+	background: hsl(0, 0%, 80%);
+	padding: 2px;
+	margin: 0 1em 0 0;
+}
 
 @media (min-width: 720px) {
 
