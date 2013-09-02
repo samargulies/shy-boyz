@@ -2,7 +2,7 @@ name: Shy Boyz
 markdown: redcarpet
 pygments: true
 permalink: /:categories/:title
-baseurl: "http://samargulies.github.io/shy-boyz/"
+baseurl: "http://shyboyz.net"
 
 exclude:
   - .gitignore
@@ -21,5 +21,37 @@ translations:
 prose:
   media: "assets/img"
   rooturl: "_posts"
-  siteurl: "http://samargulies.github.io/shy-boyz"
-  
+  siteurl: "http://shyboyz.net"
+  metadata:
+    _posts:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "lang"
+        field:
+          element: "select"
+          label: "Select language"
+          placeholder: "English"
+          options: 
+            - name: 'English'
+              value: 'en'
+            - name: 'Bulgarian'
+              value: 'bg'
+          selected: "en"
+      - name: "layout"
+        field:
+          element: "select"
+          label: "Select a layout"
+          placeholder: "Default"
+          options:
+            - name: "Page"
+              value: "page"
+          selected: "page"
+    _posts/en:
+      - name: "categories"
+        field:
+          element: "hidden"
+          value:
+            - "en"
