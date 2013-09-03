@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Нов сайт
 lang: bg
 layout: page
