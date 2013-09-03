@@ -2,7 +2,7 @@
 published: true
 title: Нов сайт
 lang: bg
-layout: page
+layout: post
 ---
 
 *Shy Boyz* има нов уебсайт [shyboyz.net](http://shyboyz.net)

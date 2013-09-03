@@ -489,7 +489,7 @@ section {
 }
 
 section h1 {
-	font-family: 'baroque-text', courier, 'courier new', monospace;
+	font-family: 'baroque-text', fantasy, courier, 'courier new', monospace;
 	font-size: 4em;
 	text-shadow: -1px 1px hsla(0, 100%, 100%, 0.4);
 	font-weight: normal;

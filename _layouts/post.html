@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% assign t = site.translations %}
+
+<section class="news">
+	<h1>{{ t.[page.lang].news}}</h1>
+	
+    <article>
+	  <h2>{{ page.title }}</h2>
+	  <time pubdate>{{ page.date | date: "%Y-%m-%d" }}</time>
+	  {{ content }}
+  </article>
+
+</section>

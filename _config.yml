@@ -46,9 +46,9 @@ prose:
           label: "Select a layout"
           placeholder: "Default"
           options:
-            - name: "Page"
-              value: "page"
-          selected: "page"
+            - name: "Post"
+              value: "post"
+          selected: "post"
     _posts/en:
       - name: "title"
         field:
@@ -72,9 +72,9 @@ prose:
           label: "Select a layout"
           placeholder: "Default"
           options:
-            - name: "Page"
-              value: "page"
-          selected: "page"
+            - name: "Post"
+              value: "post"
+          selected: "post"
       - name: "categories"
         field:
           element: "hidden"

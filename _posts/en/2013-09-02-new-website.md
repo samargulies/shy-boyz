@@ -4,7 +4,7 @@ categories:
 published: true
 title: New Website
 lang: en
-layout: page
+layout: post
 ---
 
 The *Shy Boyz* have a new website at [shyboyz.net](http://shyboyz.net)
