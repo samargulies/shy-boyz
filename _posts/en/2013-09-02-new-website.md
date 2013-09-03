@@ -1,7 +1,7 @@
 ---
 categories: 
   - en
-published: false
+published: true
 title: New Website
 lang: en
 layout: page
