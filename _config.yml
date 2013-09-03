@@ -13,9 +13,11 @@ translations:
   en:
     news: "News"
     footer-text: "&copy; MMXIII Shy Way Entertainment"
+    site-description: "The official website of the <em>Shy Boyz</em>: the greatest band in the world."
   bg:
     news: "Новини"
     footer-text: "&copy; MMXIII Shy Way забавление"
+    site-description: "Официалният уебсайт на <em>Shy Boyz</em>: най-голямата група в света."
 
 # Prose settings
 prose:
