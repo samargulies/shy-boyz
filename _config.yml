@@ -50,6 +50,31 @@ prose:
               value: "page"
           selected: "page"
     _posts/en:
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+          value: ""
+      - name: "lang"
+        field:
+          element: "select"
+          label: "Select language"
+          placeholder: "English"
+          options: 
+            - name: 'English'
+              value: 'en'
+            - name: 'Bulgarian'
+              value: 'bg'
+          selected: "en"
+      - name: "layout"
+        field:
+          element: "select"
+          label: "Select a layout"
+          placeholder: "Default"
+          options:
+            - name: "Page"
+              value: "page"
+          selected: "page"
       - name: "categories"
         field:
           element: "hidden"
