@@ -1,10 +1,10 @@
 ---
 published: false
-title: New Website
+title: Нов сайт
 lang: bg
 layout: page
 ---
 
-The *Shy Boyz* have a new website at [shyboyz.net](http://shyboyz.net)
+*Shy Boyz* има нов уебсайт [shyboyz.net](http://shyboyz.net)
 
-Please go check it out at [shyboyz.net](http://shyboyz.net)
+Моля, да отидем да проверим в [shyboyz.net](http://shyboyz.net)
