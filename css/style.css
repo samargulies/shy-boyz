@@ -90,13 +90,18 @@ body {
   }
 }
 
+.logo {
+  width: 200px;
+  height: auto;
+}
+
 .boy {
   float: left;
 }
 
 .max {
   position: relative;
-  width: 200px;
+  width: 300px;
   -webkit-perspective: 5px;
           perspective: 5px;
 }
@@ -124,7 +129,7 @@ body {
 
 .dom {
   position: relative;
-  width: 200px;
+  width: 300px;
   -webkit-perspective: 15px;
           perspective: 15px;
   -webkit-animation: shake 10s alternate infinite ease;
@@ -188,6 +193,158 @@ body {
 }
 
 .dom .body {
+  position: relative;
+  padding-top: 55%;
+}
+
+.ben {
+  position: relative;
+  width: 300px;
+  -webkit-perspective: 15px;
+          perspective: 15px;
+  -webkit-animation: shake 10s alternate infinite ease;
+          animation: shake 10s alternate infinite ease;
+}
+
+.ben img {
+  height: auto;
+  width: 100%;
+}
+
+.ben .limb {
+  position: absolute;
+  width: auto;
+  -webkit-animation: wiggle1 6s alternate infinite ease-in-out;
+          animation: wiggle1 6s alternate infinite ease-in-out;
+}
+
+.ben .head {
+  height: 22%;
+  top: 17%;
+  left: 32%;
+  -webkit-animation: wiggle1 12s alternate infinite ease-in-out;
+          animation: wiggle1 12s alternate infinite ease-in-out;
+}
+
+.ben .lower-lip {
+  height: 5%;
+  top: 32%;
+  left: 47%;
+  -webkit-animation: wiggle2 7s alternate infinite ease-in-out;
+          animation: wiggle2 7s alternate infinite ease-in-out;
+}
+
+.ben .upper-lip {
+  height: 2.25%;
+  top: 32%;
+  left: 49%;
+}
+
+.ben .nose {
+  top: 29%;
+  height: 3.5%;
+  left: 52%;
+  -webkit-animation: wiggle3 8s alternate infinite ease-in-out;
+          animation: wiggle3 8s alternate infinite ease-in-out;
+}
+
+.ben .teeth {
+  height: 2%;
+  top: 34%;
+  left: 49%;
+}
+
+.ben .left-eye {
+  height: 2%;
+  top: 28%;
+  left: 49%;
+  -webkit-animation: wiggle2 8s alternate infinite ease-in-out;
+          animation: wiggle2 8s alternate infinite ease-in-out;
+}
+
+.ben .right-eye {
+  height: 2%;
+  top: 28%;
+  right: 35%;
+}
+
+.ben .body {
+  position: relative;
+  padding-top: 55%;
+}
+
+.sean {
+  position: relative;
+  width: 300px;
+  -webkit-perspective: 15px;
+          perspective: 15px;
+  -webkit-animation: shake 10s alternate infinite ease;
+          animation: shake 10s alternate infinite ease;
+}
+
+.sean img {
+  height: auto;
+  width: 100%;
+}
+
+.sean .limb {
+  position: absolute;
+  width: auto;
+  -webkit-animation: wiggle1 6s alternate infinite ease-in-out;
+          animation: wiggle1 6s alternate infinite ease-in-out;
+}
+
+.sean .head {
+  height: 16%;
+  top: 19%;
+  left: 19%;
+  -webkit-animation: wiggle1 12s alternate infinite ease-in-out;
+          animation: wiggle1 12s alternate infinite ease-in-out;
+}
+
+.sean .lower-lip {
+  height: 5%;
+  top: 30%;
+  left: 33%;
+  -webkit-animation: wiggle2 7s alternate infinite ease-in-out;
+          animation: wiggle2 7s alternate infinite ease-in-out;
+}
+
+.sean .upper-lip {
+  height: 2.25%;
+  top: 29.25%;
+  left: 35%;
+}
+
+.sean .nose {
+  top: 26%;
+  height: 3.5%;
+  left: 37%;
+  -webkit-animation: wiggle3 8s alternate infinite ease-in-out;
+          animation: wiggle3 8s alternate infinite ease-in-out;
+}
+
+.sean .teeth {
+  height: 2%;
+  top: 30%;
+  left: 37%;
+}
+
+.sean .left-eye {
+  height: 2%;
+  top: 25%;
+  left: 27%;
+  -webkit-animation: wiggle2 8s alternate infinite ease-in-out;
+          animation: wiggle2 8s alternate infinite ease-in-out;
+}
+
+.sean .right-eye {
+  height: 2%;
+  top: 25%;
+  right: 45%;
+}
+
+.sean .body {
   position: relative;
   padding-top: 55%;
 }

@@ -34,13 +34,18 @@ body {
   }
 }
 
+.logo {
+  width: 200px;
+  height: auto;
+}
+
 .boy {
   float: left;
 }
 
 .max {
   position: relative;
-  width: 200px;
+  width: 300px;
   perspective: 5px;
   img {
     height: auto;
@@ -63,7 +68,7 @@ body {
 
 .dom {
   position: relative;
-  width: 200px;
+  width: 300px;
   perspective: 15px;
   animation: shake 10s alternate infinite ease;
 
@@ -110,6 +115,128 @@ body {
     height: 2%;
     top: 12%;
     right: 39%;
+  }
+  .body {
+    position: relative;
+    padding-top: 55%;
+  }
+}
+
+.ben {
+  position: relative;
+  width: 300px;
+  perspective: 15px;
+  animation: shake 10s alternate infinite ease;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+  
+  .limb {
+    position: absolute;
+    width: auto;
+    animation: wiggle1 6s alternate infinite ease-in-out;
+  }
+  .head {
+    height: 22%;
+    top: 17%;
+    left: 32%;
+    animation: wiggle1 12s alternate infinite ease-in-out;
+  }
+  .lower-lip {
+    height: 5%;
+    top: 32%;
+    left: 47%;
+    animation: wiggle2 7s alternate infinite ease-in-out;
+  }
+  .upper-lip {
+    height: 2.25%;
+    top: 32%;
+    left: 49%;
+  }
+  .nose {
+    top: 29%;
+    height: 3.5%;
+    left: 52%;
+    animation: wiggle3 8s alternate infinite ease-in-out;
+  }
+  .teeth {
+    height: 2%;
+    top: 34%;
+    left: 49%;
+  }
+  .left-eye {
+    height: 2%;
+    top: 28%;
+    left: 49%;
+    animation: wiggle2 8s alternate infinite ease-in-out;
+  }
+  .right-eye {
+    height: 2%;
+    top: 28%;
+    right: 35%;
+  }
+  .body {
+    position: relative;
+    padding-top: 55%;
+  }
+}
+
+.sean {
+  position: relative;
+  width: 300px;
+  perspective: 15px;
+  animation: shake 10s alternate infinite ease;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+  
+  .limb {
+    position: absolute;
+    width: auto;
+    animation: wiggle1 6s alternate infinite ease-in-out;
+  }
+  .head {
+    height: 16%;
+    top: 19%;
+    left: 19%;
+    animation: wiggle1 12s alternate infinite ease-in-out;
+  }
+  .lower-lip {
+    height: 5%;
+    top: 30%;
+    left: 33%;
+    animation: wiggle2 7s alternate infinite ease-in-out;
+  }
+  .upper-lip {
+    height: 2.25%;
+    top: 29.25%;
+    left: 35%;
+  }
+  .nose {
+    top: 26%;
+    height: 3.5%;
+    left: 37%;
+    animation: wiggle3 8s alternate infinite ease-in-out;
+  }
+  .teeth {
+    height: 2%;
+    top: 30%;
+    left: 37%;
+  }
+  .left-eye {
+    height: 2%;
+    top: 25%;
+    left: 27%;
+    animation: wiggle2 8s alternate infinite ease-in-out;
+  }
+  .right-eye {
+    height: 2%;
+    top: 25%;
+    right: 45%;
   }
   .body {
     position: relative;
