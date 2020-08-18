@@ -1,13 +1,20 @@
 body {
   background: lightblue;
 }
-
+@keyframes shake {
+  from {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  to {
+    transform: rotate3d(1, 1, 0, 30deg);
+  }
+}
 @keyframes wiggle1 {
   from {
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(8%, 5%, 2px);
+    transform: translate3d(8%, 5%, 1px);
   }
 }
 @keyframes wiggle2 {
@@ -15,7 +22,7 @@ body {
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(4%, 2%, 4px);
+    transform: translate3d(4%, 2%, 1.5px);
   }
 }
 @keyframes wiggle3 {
@@ -23,13 +30,42 @@ body {
     transform: translate3d(0, 0, 0);
   }
   to {
-    transform: translate3d(5%, 3%, 3px);
+    transform: translate3d(5%, 3%, 2px);
+  }
+}
+
+.boy {
+  float: left;
+}
+
+.max {
+  position: relative;
+  width: 200px;
+  perspective: 5px;
+  img {
+    height: auto;
+    width: 100%;
+  }
+  .body {
+    position: relative;
+    z-index: 2;
+  }
+  .head {
+    position: absolute;
+    width: auto;
+    z-index: 1;
+    animation: wiggle1 12s alternate infinite ease-in-out;
+    height: 22%;
+    top: 12%;
+    left: 39%;
   }
 }
 
 .dom {
   position: relative;
   width: 200px;
+  perspective: 15px;
+  animation: shake 10s alternate infinite ease;
 
   img {
     height: auto;
