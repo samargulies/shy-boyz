@@ -1,0 +1,136 @@
+body {
+  background: lightblue;
+}
+
+@-webkit-keyframes wiggle1 {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(8%, 5%, 2px);
+            transform: translate3d(8%, 5%, 2px);
+  }
+}
+
+@keyframes wiggle1 {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(8%, 5%, 2px);
+            transform: translate3d(8%, 5%, 2px);
+  }
+}
+
+@-webkit-keyframes wiggle2 {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(4%, 2%, 4px);
+            transform: translate3d(4%, 2%, 4px);
+  }
+}
+
+@keyframes wiggle2 {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(4%, 2%, 4px);
+            transform: translate3d(4%, 2%, 4px);
+  }
+}
+
+@-webkit-keyframes wiggle3 {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(5%, 3%, 3px);
+            transform: translate3d(5%, 3%, 3px);
+  }
+}
+
+@keyframes wiggle3 {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  to {
+    -webkit-transform: translate3d(5%, 3%, 3px);
+            transform: translate3d(5%, 3%, 3px);
+  }
+}
+
+.dom {
+  position: relative;
+  width: 200px;
+}
+
+.dom img {
+  height: auto;
+  width: 100%;
+}
+
+.dom .limb {
+  position: absolute;
+  width: auto;
+  -webkit-animation: wiggle1 6s alternate infinite ease-in-out;
+          animation: wiggle1 6s alternate infinite ease-in-out;
+}
+
+.dom .head {
+  height: 22%;
+  top: 0;
+  left: 19%;
+  -webkit-animation: wiggle1 12s alternate infinite ease-in-out;
+          animation: wiggle1 12s alternate infinite ease-in-out;
+}
+
+.dom .lower-lip {
+  height: 5%;
+  top: 16.5%;
+  left: 39%;
+  -webkit-animation: wiggle2 7s alternate infinite ease-in-out;
+          animation: wiggle2 7s alternate infinite ease-in-out;
+}
+
+.dom .upper-lip {
+  height: 2.25%;
+  top: 16%;
+  left: 39%;
+}
+
+.dom .nose {
+  top: 13%;
+  height: 3.5%;
+  left: 45%;
+  -webkit-animation: wiggle3 8s alternate infinite ease-in-out;
+          animation: wiggle3 8s alternate infinite ease-in-out;
+}
+
+.dom .left-eye {
+  height: 2%;
+  top: 12%;
+  left: 36%;
+  -webkit-animation: wiggle2 8s alternate infinite ease-in-out;
+          animation: wiggle2 8s alternate infinite ease-in-out;
+}
+
+.dom .right-eye {
+  height: 2%;
+  top: 12%;
+  right: 39%;
+}
+
+.dom .body {
+  position: relative;
+  padding-top: 55%;
+}
+/*# sourceMappingURL=style.css.map */
