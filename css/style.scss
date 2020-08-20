@@ -11,21 +11,33 @@
 h1, h2 {
   font-size: 32px;
   font-family: 'times-ttf-32', sans-serif;
-  // clear: both;
+  clear: both;
+
+  @media (min-width: 950px) {
+    clear: none;
+  }
 }
+
+h2 {
+  color: blue;
+}
+
 :root {
-  --origin: 20%;
+  --origin: 0%;
 }
 
 body {
-  background: no-repeat pink;
+  background: url('../img/velvet.jpg') pink;
   background-size: cover;
+  background-position: 50% var(--origin);
   background-attachment: fixed;
+  transition: background-position 0.1s linear;
   font-family: 'times-ttf-16', sans-serif;
   font-size: 16px;
   -webkit-font-smoothing : none;
   margin: 0 auto;
   max-width: 720px;
+  padding: 10px;
 }
 
 img {
@@ -38,7 +50,7 @@ img {
     transform: rotate3d(1, 1, 1, 0deg);
   }
   to {
-    transform: rotate3d(1, 1, 0, 30deg);
+    transform: rotate3d(1, 1, 0, 20deg);
   }
 }
 @keyframes shake2 {
@@ -46,7 +58,7 @@ img {
     transform: rotate3d(1, 1, 1, 0deg);
   }
   to {
-    transform: rotate3d(1, 1, 0, -30deg);
+    transform: rotate3d(0, 1, 0, 20deg);
   }
 }
 @keyframes wiggle1 {
@@ -76,6 +88,10 @@ img {
 
 table, th, td {
   border: 2px gray inset;
+  background-color: white;
+}
+table img {
+  max-width: 250px;
 }
 th, td {
   padding: 0.5em;
@@ -93,10 +109,10 @@ th, td {
     float: right;
   }
   perspective-origin: 50% var(--origin);
-  perspective: 90px;
+  perspective: 60px;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 950px) {
   .boy {
     margin-left: -250px;
     &.right {
@@ -120,8 +136,12 @@ th, td {
 
 .max {
   position: relative;
-  width: 280px;
-  animation: shake1 10s alternate infinite reverse ease;
+  width: 50%;
+  @media (min-width: 950px) {
+    width: 280px;
+  }
+  perspective: 20px;
+  animation: shake 10s alternate-reverse infinite ease;
 
   img {
     height: auto;
@@ -162,13 +182,16 @@ th, td {
     height: 3%;
     top: 16%;
     right: 22%;
+    animation: wiggle3 4s alternate-reverse infinite  ease-in-out;
   }
 }
 
 .dom {
   position: relative;
   width: 260px;
-  animation: shake2 10s alternate infinite reverse ease;
+  perspective: 30px;
+  margin-top: 15%;
+  animation: shake2 10s alternate infinite ease;
 
   img {
     height: auto;
@@ -181,48 +204,48 @@ th, td {
     animation: wiggle1 6s alternate infinite ease-in-out;
   }
   .head {
-    height: 22%;
-    top: 0;
+    height: 26%;
+    top: -19%;
     left: 19%;
     // animation: wiggle1 12s alternate infinite ease-in-out;
   }
   .lower-lip {
     height: 5%;
-    top: 16.5%;
+    top: -2.5%;
     left: 39%;
     animation: wiggle2 7s alternate infinite ease-in-out;
   }
   .upper-lip {
     height: 2.25%;
-    top: 16%;
+    top: -3%;
     left: 39%;
   }
   .nose {
-    top: 13%;
+    top: -6%;
     height: 3.5%;
     left: 45%;
     animation: wiggle3 8s alternate infinite ease-in-out;
   }
   .left-eye {
     height: 2%;
-    top: 12%;
+    top: -7%;
     left: 36%;
     animation: wiggle2 8s alternate infinite ease-in-out;
   }
   .right-eye {
     height: 2%;
-    top: 12%;
+    top: -7%;
     right: 39%;
   }
   .body {
     position: relative;
-    padding-top: 55%;
   }
 }
 
 .ben {
   position: relative;
-  width: 320px;
+  width: 380px;
+  perspective: 50px;
   animation: shake2 10s alternate infinite ease;
 
   img {
@@ -237,52 +260,54 @@ th, td {
   }
   .head {
     height: 22%;
-    top: 17%;
-    left: 32%;
-    // animation: wiggle1 12s alternate infinite ease-in-out;
+    top: -2%;
+    left: 37%;
   }
   .lower-lip {
-    height: 5%;
-    top: 32%;
-    left: 47%;
+    height: 4%;
+    top: 13%;
+    left: 49%;
     animation: wiggle2 7s alternate infinite ease-in-out;
   }
   .upper-lip {
-    height: 2.25%;
-    top: 32%;
+    height: 2.5%;
+    top: 13.5%;
     left: 49%;
   }
   .nose {
-    top: 29%;
+    top: 9.5%;
     height: 3.5%;
     left: 52%;
     animation: wiggle3 8s alternate infinite ease-in-out;
   }
   .teeth {
-    height: 2%;
-    top: 34%;
-    left: 49%;
+    height: 1.5%;
+    top: 15%;
+    left: 51%;
   }
   .left-eye {
-    height: 2%;
-    top: 28%;
-    left: 49%;
+    height: 2.5%;
+    top: 9%;
+    left: 47%;
     animation: wiggle2 8s alternate infinite ease-in-out;
   }
   .right-eye {
-    height: 2%;
-    top: 28%;
+    height: 2.5%;
+    top: 8.5%;
     right: 35%;
   }
   .body {
     position: relative;
-    padding-top: 55%;
   }
 }
 
 .sean {
   position: relative;
-  width: 280px;
+  width: 50%;
+  @media (min-width: 950px) {
+    width: 280px;
+  }
+  perspective: 60px;
   animation: shake 10s alternate infinite ease;
 
   img {
@@ -296,53 +321,54 @@ th, td {
     animation: wiggle1 6s alternate infinite ease-in-out;
   }
   .head {
-    height: 16%;
-    top: 19%;
-    left: 19%;
-    // animation: wiggle1 12s alternate infinite ease-in-out;
+    height: 19%;
+    top: 1%;
+    left: 20%;
   }
   .lower-lip {
     height: 5%;
-    top: 30%;
-    left: 33%;
+    top: 12%;
+    left: 34%;
     animation: wiggle2 7s alternate infinite ease-in-out;
   }
   .upper-lip {
     height: 2.25%;
-    top: 29.25%;
+    top: 11.25%;
     left: 35%;
   }
   .nose {
-    top: 26%;
+    top: 7.5%;
     height: 3.5%;
     left: 37%;
     animation: wiggle3 8s alternate infinite ease-in-out;
   }
   .teeth {
     height: 2%;
-    top: 30%;
-    left: 37%;
+    top: 12%;
+    left: 36%;
   }
   .left-eye {
-    height: 2%;
-    top: 25%;
-    left: 27%;
+    height: 1.5%;
+    top: 7%;
+    left: 30%;
     animation: wiggle2 8s alternate infinite ease-in-out;
   }
   .right-eye {
     height: 2%;
-    top: 25%;
-    right: 45%;
+    top: 6.75%;
+    right: 47%;
   }
   .body {
     position: relative;
-    padding-top: 55%;
   }
 }
 
 .greg {
   position: relative;
-  width: 400px;
+  width: 100%;
+  @media (min-width: 650px) {
+    width: 440px;
+  }
   animation: shake 10s alternate infinite reverse ease;
 
   img {
@@ -356,35 +382,34 @@ th, td {
     animation: wiggle1 6s alternate infinite ease-in-out;
   }
   .head {
-    height: 20%;
-    top: 36%;
-    left: 15%;
+    height: 26%;
+    top: 12%;
+    left: 17%;
     animation: wiggle1 12s alternate infinite ease-in-out;
   }
   .mouth {
-    height: 2.25%;
-    top: 47%;
+    height: 3%;
+    top: 28%;
     left: 25%;
   }
   .nose {
-    top: 43.5%;
-    height: 3.5%;
+    top: 24.5%;
+    height: 4.5%;
     left: 26%;
     animation: wiggle3 8s alternate infinite ease-in-out;
   }
   .left-eye {
-    height: 2%;
-    top: 43.5%;
+    height: 3%;
+    top: 23.5%;
     left: 21%;
     animation: wiggle2 8s alternate infinite ease-in-out;
   }
   .right-eye {
-    height: 1.5%;
-    top: 42.5%;
+    height: 2%;
+    top: 23.5%;
     right: 65%;
   }
   .body {
     position: relative;
-    padding-top: 55%;
   }
 }

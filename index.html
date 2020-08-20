@@ -46,19 +46,26 @@
       <thead>
         <tr>
           <th></th>
+          <th>Name</th>
           <th>Price</th>
           <th>Link</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><img src="img/spank-shirt.png" width="250" /></td>
+          <td><a href="https://shyboyz.bandcamp.com/album/julies-fridge"><img src="img/julies-fridge.jpg" width="250" /></a></td>
+          <td>Julie's Fridge (Album)</td>
+          <td>$5</td>
+          <td><a href="https://shyboyz.bandcamp.com/album/julies-fridge">Buy now</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://shyboyz.bandcamp.com/merch/spanking-shirt"><img src="img/spank-shirt.png" width="250" /></a></td>
           <td>T-Shirt</td>
           <td>$15</td>
           <td><a href="https://shyboyz.bandcamp.com/merch/spanking-shirt">Buy now</a></td>
         </tr>
         <tr>
-          <td><img src="img/doggy-shirt.png" width="250" /></td>
+          <td><a href="https://shyboyz.bandcamp.com/merch/shy-boyz-hugging-men-doggie-t-shirt-designed-by-annson"><img src="img/doggy-shirt.png" width="250" /></a></td>
           <td>Doggy T-Shirt</td>
           <td>$15</td>
           <td><a href="https://shyboyz.bandcamp.com/merch/shy-boyz-hugging-men-doggie-t-shirt-designed-by-annson">Buy now</a></a></td>
@@ -72,6 +79,19 @@
       </tbody>
     </table>
   </section>
+  <div class="boy dom right">
+    <img class="body" src="img/dom_body.svg" />
+
+    <img class="limb head" src="img/dom_head.png" />
+
+    <img class="limb lower-lip" src="img/dom_lower_lip.png" />
+    <img class="limb upper-lip" src="img/dom_upper_lip.png" />
+
+    <img class="limb nose" src="img/dom_nose.png" />
+
+    <img class="limb left-eye" src="img/dom_left_eye.png" />
+    <img class="limb right-eye" src="img/dom_right_eye.png" />
+  </div>
   <section>
     <h2>Listen</h2>
     <p>Listen on <a href="https://open.spotify.com/artist/2FxzDIKi5Kl9xoEBKI9A5L?si=cWyrReSfRiavz3DOHA7nAA">Spotify</a> or <a href="https://shyboyz.bandcamp.com/">buy our albums on Bandcamp.</a></p>
@@ -90,19 +110,6 @@
 
     <img class="limb left-eye" src="img/ben_left_eye.png" />
     <img class="limb right-eye" src="img/ben_right_eye.png" />
-  </div>
-  <div class="boy dom right">
-    <img class="body" src="img/dom_body.svg" />
-
-    <img class="limb head" src="img/dom_head.png" />
-
-    <img class="limb lower-lip" src="img/dom_lower_lip.png" />
-    <img class="limb upper-lip" src="img/dom_upper_lip.png" />
-
-    <img class="limb nose" src="img/dom_nose.png" />
-
-    <img class="limb left-eye" src="img/dom_left_eye.png" />
-    <img class="limb right-eye" src="img/dom_right_eye.png" />
   </div>
   <section>
     <h2>Watch</h2>
@@ -147,10 +154,10 @@
           let link = document.createElement("a");
           link.href = "https://www.youtube.com?v=" + item.id.videoId;
           link.appendChild(img);
-          video.appendChild(link);
           let title = document.createElement("h3");
           title.innerHTML = item.snippet.title;
-          video.appendChild(title);
+          link.appendChild(title);
+          video.appendChild(link);
           container.appendChild(video);
         });
       })

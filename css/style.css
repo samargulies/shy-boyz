@@ -12,21 +12,36 @@
 h1, h2 {
   font-size: 32px;
   font-family: 'times-ttf-32', sans-serif;
+  clear: both;
+}
+
+@media (min-width: 950px) {
+  h1, h2 {
+    clear: none;
+  }
+}
+
+h2 {
+  color: blue;
 }
 
 :root {
-  --origin: 20%;
+  --origin: 0%;
 }
 
 body {
-  background: no-repeat pink;
+  background: url("../img/velvet.jpg") pink;
   background-size: cover;
+  background-position: 50% var(--origin);
   background-attachment: fixed;
+  -webkit-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
   font-family: 'times-ttf-16', sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: none;
   margin: 0 auto;
   max-width: 720px;
+  padding: 10px;
 }
 
 img {
@@ -40,8 +55,8 @@ img {
             transform: rotate3d(1, 1, 1, 0deg);
   }
   to {
-    -webkit-transform: rotate3d(1, 1, 0, 30deg);
-            transform: rotate3d(1, 1, 0, 30deg);
+    -webkit-transform: rotate3d(1, 1, 0, 20deg);
+            transform: rotate3d(1, 1, 0, 20deg);
   }
 }
 
@@ -51,8 +66,8 @@ img {
             transform: rotate3d(1, 1, 1, 0deg);
   }
   to {
-    -webkit-transform: rotate3d(1, 1, 0, 30deg);
-            transform: rotate3d(1, 1, 0, 30deg);
+    -webkit-transform: rotate3d(1, 1, 0, 20deg);
+            transform: rotate3d(1, 1, 0, 20deg);
   }
 }
 
@@ -62,8 +77,8 @@ img {
             transform: rotate3d(1, 1, 1, 0deg);
   }
   to {
-    -webkit-transform: rotate3d(1, 1, 0, -30deg);
-            transform: rotate3d(1, 1, 0, -30deg);
+    -webkit-transform: rotate3d(0, 1, 0, 20deg);
+            transform: rotate3d(0, 1, 0, 20deg);
   }
 }
 
@@ -73,8 +88,8 @@ img {
             transform: rotate3d(1, 1, 1, 0deg);
   }
   to {
-    -webkit-transform: rotate3d(1, 1, 0, -30deg);
-            transform: rotate3d(1, 1, 0, -30deg);
+    -webkit-transform: rotate3d(0, 1, 0, 20deg);
+            transform: rotate3d(0, 1, 0, 20deg);
   }
 }
 
@@ -146,6 +161,11 @@ img {
 
 table, th, td {
   border: 2px gray inset;
+  background-color: white;
+}
+
+table img {
+  max-width: 250px;
 }
 
 th, td {
@@ -162,15 +182,15 @@ th, td {
   width: 20%;
   -webkit-perspective-origin: 50% var(--origin);
           perspective-origin: 50% var(--origin);
-  -webkit-perspective: 90px;
-          perspective: 90px;
+  -webkit-perspective: 60px;
+          perspective: 60px;
 }
 
 .boy.right {
   float: right;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 950px) {
   .boy {
     margin-left: -250px;
   }
@@ -195,8 +215,16 @@ th, td {
 
 .max {
   position: relative;
-  width: 280px;
-  animation: shake1 10s alternate infinite reverse ease;
+  width: 50%;
+  -webkit-perspective: 20px;
+          perspective: 20px;
+  animation: shake 10s alternate-reverse infinite ease;
+}
+
+@media (min-width: 950px) {
+  .max {
+    width: 280px;
+  }
 }
 
 .max img {
@@ -249,12 +277,17 @@ th, td {
   height: 3%;
   top: 16%;
   right: 22%;
+  animation: wiggle3 4s alternate-reverse infinite  ease-in-out;
 }
 
 .dom {
   position: relative;
   width: 260px;
-  animation: shake2 10s alternate infinite reverse ease;
+  -webkit-perspective: 30px;
+          perspective: 30px;
+  margin-top: 15%;
+  -webkit-animation: shake2 10s alternate infinite ease;
+          animation: shake2 10s alternate infinite ease;
 }
 
 .dom img {
@@ -270,14 +303,14 @@ th, td {
 }
 
 .dom .head {
-  height: 22%;
-  top: 0;
+  height: 26%;
+  top: -19%;
   left: 19%;
 }
 
 .dom .lower-lip {
   height: 5%;
-  top: 16.5%;
+  top: -2.5%;
   left: 39%;
   -webkit-animation: wiggle2 7s alternate infinite ease-in-out;
           animation: wiggle2 7s alternate infinite ease-in-out;
@@ -285,12 +318,12 @@ th, td {
 
 .dom .upper-lip {
   height: 2.25%;
-  top: 16%;
+  top: -3%;
   left: 39%;
 }
 
 .dom .nose {
-  top: 13%;
+  top: -6%;
   height: 3.5%;
   left: 45%;
   -webkit-animation: wiggle3 8s alternate infinite ease-in-out;
@@ -299,7 +332,7 @@ th, td {
 
 .dom .left-eye {
   height: 2%;
-  top: 12%;
+  top: -7%;
   left: 36%;
   -webkit-animation: wiggle2 8s alternate infinite ease-in-out;
           animation: wiggle2 8s alternate infinite ease-in-out;
@@ -307,18 +340,19 @@ th, td {
 
 .dom .right-eye {
   height: 2%;
-  top: 12%;
+  top: -7%;
   right: 39%;
 }
 
 .dom .body {
   position: relative;
-  padding-top: 55%;
 }
 
 .ben {
   position: relative;
-  width: 320px;
+  width: 380px;
+  -webkit-perspective: 50px;
+          perspective: 50px;
   -webkit-animation: shake2 10s alternate infinite ease;
           animation: shake2 10s alternate infinite ease;
 }
@@ -337,26 +371,26 @@ th, td {
 
 .ben .head {
   height: 22%;
-  top: 17%;
-  left: 32%;
+  top: -2%;
+  left: 37%;
 }
 
 .ben .lower-lip {
-  height: 5%;
-  top: 32%;
-  left: 47%;
+  height: 4%;
+  top: 13%;
+  left: 49%;
   -webkit-animation: wiggle2 7s alternate infinite ease-in-out;
           animation: wiggle2 7s alternate infinite ease-in-out;
 }
 
 .ben .upper-lip {
-  height: 2.25%;
-  top: 32%;
+  height: 2.5%;
+  top: 13.5%;
   left: 49%;
 }
 
 .ben .nose {
-  top: 29%;
+  top: 9.5%;
   height: 3.5%;
   left: 52%;
   -webkit-animation: wiggle3 8s alternate infinite ease-in-out;
@@ -364,35 +398,42 @@ th, td {
 }
 
 .ben .teeth {
-  height: 2%;
-  top: 34%;
-  left: 49%;
+  height: 1.5%;
+  top: 15%;
+  left: 51%;
 }
 
 .ben .left-eye {
-  height: 2%;
-  top: 28%;
-  left: 49%;
+  height: 2.5%;
+  top: 9%;
+  left: 47%;
   -webkit-animation: wiggle2 8s alternate infinite ease-in-out;
           animation: wiggle2 8s alternate infinite ease-in-out;
 }
 
 .ben .right-eye {
-  height: 2%;
-  top: 28%;
+  height: 2.5%;
+  top: 8.5%;
   right: 35%;
 }
 
 .ben .body {
   position: relative;
-  padding-top: 55%;
 }
 
 .sean {
   position: relative;
-  width: 280px;
+  width: 50%;
+  -webkit-perspective: 60px;
+          perspective: 60px;
   -webkit-animation: shake 10s alternate infinite ease;
           animation: shake 10s alternate infinite ease;
+}
+
+@media (min-width: 950px) {
+  .sean {
+    width: 280px;
+  }
 }
 
 .sean img {
@@ -408,27 +449,27 @@ th, td {
 }
 
 .sean .head {
-  height: 16%;
-  top: 19%;
-  left: 19%;
+  height: 19%;
+  top: 1%;
+  left: 20%;
 }
 
 .sean .lower-lip {
   height: 5%;
-  top: 30%;
-  left: 33%;
+  top: 12%;
+  left: 34%;
   -webkit-animation: wiggle2 7s alternate infinite ease-in-out;
           animation: wiggle2 7s alternate infinite ease-in-out;
 }
 
 .sean .upper-lip {
   height: 2.25%;
-  top: 29.25%;
+  top: 11.25%;
   left: 35%;
 }
 
 .sean .nose {
-  top: 26%;
+  top: 7.5%;
   height: 3.5%;
   left: 37%;
   -webkit-animation: wiggle3 8s alternate infinite ease-in-out;
@@ -437,33 +478,38 @@ th, td {
 
 .sean .teeth {
   height: 2%;
-  top: 30%;
-  left: 37%;
+  top: 12%;
+  left: 36%;
 }
 
 .sean .left-eye {
-  height: 2%;
-  top: 25%;
-  left: 27%;
+  height: 1.5%;
+  top: 7%;
+  left: 30%;
   -webkit-animation: wiggle2 8s alternate infinite ease-in-out;
           animation: wiggle2 8s alternate infinite ease-in-out;
 }
 
 .sean .right-eye {
   height: 2%;
-  top: 25%;
-  right: 45%;
+  top: 6.75%;
+  right: 47%;
 }
 
 .sean .body {
   position: relative;
-  padding-top: 55%;
 }
 
 .greg {
   position: relative;
-  width: 400px;
+  width: 100%;
   animation: shake 10s alternate infinite reverse ease;
+}
+
+@media (min-width: 650px) {
+  .greg {
+    width: 440px;
+  }
 }
 
 .greg img {
@@ -479,43 +525,42 @@ th, td {
 }
 
 .greg .head {
-  height: 20%;
-  top: 36%;
-  left: 15%;
+  height: 26%;
+  top: 12%;
+  left: 17%;
   -webkit-animation: wiggle1 12s alternate infinite ease-in-out;
           animation: wiggle1 12s alternate infinite ease-in-out;
 }
 
 .greg .mouth {
-  height: 2.25%;
-  top: 47%;
+  height: 3%;
+  top: 28%;
   left: 25%;
 }
 
 .greg .nose {
-  top: 43.5%;
-  height: 3.5%;
+  top: 24.5%;
+  height: 4.5%;
   left: 26%;
   -webkit-animation: wiggle3 8s alternate infinite ease-in-out;
           animation: wiggle3 8s alternate infinite ease-in-out;
 }
 
 .greg .left-eye {
-  height: 2%;
-  top: 43.5%;
+  height: 3%;
+  top: 23.5%;
   left: 21%;
   -webkit-animation: wiggle2 8s alternate infinite ease-in-out;
           animation: wiggle2 8s alternate infinite ease-in-out;
 }
 
 .greg .right-eye {
-  height: 1.5%;
-  top: 42.5%;
+  height: 2%;
+  top: 23.5%;
   right: 65%;
 }
 
 .greg .body {
   position: relative;
-  padding-top: 55%;
 }
 /*# sourceMappingURL=style.css.map */
