@@ -1,12 +1,52 @@
-body {
-  background: lightblue;
+@font-face {
+  font-family: 'times-ttf-16';
+  src: url('../fonts/times-ttf-16-regular.woff') format('woff');
 }
+@font-face {
+  font-family: 'times-ttf-32';
+  src: url('../fonts/times-ttf-32-bold.woff') format('woff');
+  font-weight: bold;
+}
+
+h1, h2 {
+  font-size: 32px;
+  font-family: 'times-ttf-32', sans-serif;
+  // clear: both;
+}
+:root {
+  --origin: 20%;
+}
+
+body {
+  background: no-repeat pink;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'times-ttf-16', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing : none;
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+img {
+  width: 100%;
+  max-width: auto;
+}
+
 @keyframes shake {
   from {
     transform: rotate3d(1, 1, 1, 0deg);
   }
   to {
     transform: rotate3d(1, 1, 0, 30deg);
+  }
+}
+@keyframes shake2 {
+  from {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  to {
+    transform: rotate3d(1, 1, 0, -30deg);
   }
 }
 @keyframes wiggle1 {
@@ -34,6 +74,13 @@ body {
   }
 }
 
+table, th, td {
+  border: 2px gray inset;
+}
+th, td {
+  padding: 0.5em;
+}
+
 .logo {
   width: 200px;
   height: auto;
@@ -41,36 +88,87 @@ body {
 
 .boy {
   float: left;
+  width: 20%;
+  &.right {
+    float: right;
+  }
+  perspective-origin: 50% var(--origin);
+  perspective: 90px;
+}
+
+@media (min-width: 720px) {
+  .boy {
+    margin-left: -250px;
+    &.right {
+      margin-left: 0;
+      margin-right: -250px;
+    }
+  }
+}
+
+.youtube-videos {
+  display: grid;
+  
+  .video {
+    width: 450px;
+
+    h3 {
+      margin-top: 0;
+    }
+  }
 }
 
 .max {
   position: relative;
-  width: 300px;
-  perspective: 5px;
+  width: 280px;
+  animation: shake1 10s alternate infinite reverse ease;
+
   img {
     height: auto;
     width: 100%;
   }
-  .body {
-    position: relative;
-    z-index: 2;
-  }
-  .head {
+  .limb {
     position: absolute;
     width: auto;
-    z-index: 1;
-    animation: wiggle1 12s alternate infinite ease-in-out;
-    height: 22%;
-    top: 12%;
+    animation: wiggle1 6s alternate infinite ease-in-out;
+  }
+  .head {
+    animation: wiggle2 12s alternate infinite ease-in-out;
+    height: 24%;
+    top: 9%;
     left: 39%;
+  }
+  .body {
+    position: relative;
+  }
+  .mouth {
+    height: 4%;
+    top: 23%;
+    left: 58%;
+  }
+  .nose {
+    top: 14%;
+    height: 9%;
+    left: 61%;
+    animation: wiggle3 8s alternate infinite ease-in-out;
+  }
+  .left-eye {
+    height: 3%;
+    top: 14%;
+    left: 55%;
+    animation: wiggle2 8s alternate infinite ease-in-out;
+  }
+  .right-eye {
+    height: 3%;
+    top: 16%;
+    right: 22%;
   }
 }
 
 .dom {
   position: relative;
-  width: 300px;
-  perspective: 15px;
-  animation: shake 10s alternate infinite ease;
+  width: 260px;
+  animation: shake2 10s alternate infinite reverse ease;
 
   img {
     height: auto;
@@ -86,7 +184,7 @@ body {
     height: 22%;
     top: 0;
     left: 19%;
-    animation: wiggle1 12s alternate infinite ease-in-out;
+    // animation: wiggle1 12s alternate infinite ease-in-out;
   }
   .lower-lip {
     height: 5%;
@@ -124,9 +222,8 @@ body {
 
 .ben {
   position: relative;
-  width: 300px;
-  perspective: 15px;
-  animation: shake 10s alternate infinite ease;
+  width: 320px;
+  animation: shake2 10s alternate infinite ease;
 
   img {
     height: auto;
@@ -142,7 +239,7 @@ body {
     height: 22%;
     top: 17%;
     left: 32%;
-    animation: wiggle1 12s alternate infinite ease-in-out;
+    // animation: wiggle1 12s alternate infinite ease-in-out;
   }
   .lower-lip {
     height: 5%;
@@ -185,8 +282,7 @@ body {
 
 .sean {
   position: relative;
-  width: 300px;
-  perspective: 15px;
+  width: 280px;
   animation: shake 10s alternate infinite ease;
 
   img {
@@ -203,7 +299,7 @@ body {
     height: 16%;
     top: 19%;
     left: 19%;
-    animation: wiggle1 12s alternate infinite ease-in-out;
+    // animation: wiggle1 12s alternate infinite ease-in-out;
   }
   .lower-lip {
     height: 5%;
@@ -237,6 +333,55 @@ body {
     height: 2%;
     top: 25%;
     right: 45%;
+  }
+  .body {
+    position: relative;
+    padding-top: 55%;
+  }
+}
+
+.greg {
+  position: relative;
+  width: 400px;
+  animation: shake 10s alternate infinite reverse ease;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+  
+  .limb {
+    position: absolute;
+    width: auto;
+    animation: wiggle1 6s alternate infinite ease-in-out;
+  }
+  .head {
+    height: 20%;
+    top: 36%;
+    left: 15%;
+    animation: wiggle1 12s alternate infinite ease-in-out;
+  }
+  .mouth {
+    height: 2.25%;
+    top: 47%;
+    left: 25%;
+  }
+  .nose {
+    top: 43.5%;
+    height: 3.5%;
+    left: 26%;
+    animation: wiggle3 8s alternate infinite ease-in-out;
+  }
+  .left-eye {
+    height: 2%;
+    top: 43.5%;
+    left: 21%;
+    animation: wiggle2 8s alternate infinite ease-in-out;
+  }
+  .right-eye {
+    height: 1.5%;
+    top: 42.5%;
+    right: 65%;
   }
   .body {
     position: relative;

@@ -1,5 +1,37 @@
+@font-face {
+  font-family: 'times-ttf-16';
+  src: url("../fonts/times-ttf-16-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'times-ttf-32';
+  src: url("../fonts/times-ttf-32-bold.woff") format("woff");
+  font-weight: bold;
+}
+
+h1, h2 {
+  font-size: 32px;
+  font-family: 'times-ttf-32', sans-serif;
+}
+
+:root {
+  --origin: 20%;
+}
+
 body {
-  background: lightblue;
+  background: no-repeat pink;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'times-ttf-16', sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: none;
+  margin: 0 auto;
+  max-width: 720px;
+}
+
+img {
+  width: 100%;
+  max-width: auto;
 }
 
 @-webkit-keyframes shake {
@@ -21,6 +53,28 @@ body {
   to {
     -webkit-transform: rotate3d(1, 1, 0, 30deg);
             transform: rotate3d(1, 1, 0, 30deg);
+  }
+}
+
+@-webkit-keyframes shake2 {
+  from {
+    -webkit-transform: rotate3d(1, 1, 1, 0deg);
+            transform: rotate3d(1, 1, 1, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(1, 1, 0, -30deg);
+            transform: rotate3d(1, 1, 0, -30deg);
+  }
+}
+
+@keyframes shake2 {
+  from {
+    -webkit-transform: rotate3d(1, 1, 1, 0deg);
+            transform: rotate3d(1, 1, 1, 0deg);
+  }
+  to {
+    -webkit-transform: rotate3d(1, 1, 0, -30deg);
+            transform: rotate3d(1, 1, 0, -30deg);
   }
 }
 
@@ -90,6 +144,14 @@ body {
   }
 }
 
+table, th, td {
+  border: 2px gray inset;
+}
+
+th, td {
+  padding: 0.5em;
+}
+
 .logo {
   width: 200px;
   height: auto;
@@ -97,13 +159,44 @@ body {
 
 .boy {
   float: left;
+  width: 20%;
+  -webkit-perspective-origin: 50% var(--origin);
+          perspective-origin: 50% var(--origin);
+  -webkit-perspective: 90px;
+          perspective: 90px;
+}
+
+.boy.right {
+  float: right;
+}
+
+@media (min-width: 720px) {
+  .boy {
+    margin-left: -250px;
+  }
+  .boy.right {
+    margin-left: 0;
+    margin-right: -250px;
+  }
+}
+
+.youtube-videos {
+  display: -ms-grid;
+  display: grid;
+}
+
+.youtube-videos .video {
+  width: 450px;
+}
+
+.youtube-videos .video h3 {
+  margin-top: 0;
 }
 
 .max {
   position: relative;
-  width: 300px;
-  -webkit-perspective: 5px;
-          perspective: 5px;
+  width: 280px;
+  animation: shake1 10s alternate infinite reverse ease;
 }
 
 .max img {
@@ -111,29 +204,57 @@ body {
   width: 100%;
 }
 
-.max .body {
-  position: relative;
-  z-index: 2;
+.max .limb {
+  position: absolute;
+  width: auto;
+  -webkit-animation: wiggle1 6s alternate infinite ease-in-out;
+          animation: wiggle1 6s alternate infinite ease-in-out;
 }
 
 .max .head {
-  position: absolute;
-  width: auto;
-  z-index: 1;
-  -webkit-animation: wiggle1 12s alternate infinite ease-in-out;
-          animation: wiggle1 12s alternate infinite ease-in-out;
-  height: 22%;
-  top: 12%;
+  -webkit-animation: wiggle2 12s alternate infinite ease-in-out;
+          animation: wiggle2 12s alternate infinite ease-in-out;
+  height: 24%;
+  top: 9%;
   left: 39%;
+}
+
+.max .body {
+  position: relative;
+}
+
+.max .mouth {
+  height: 4%;
+  top: 23%;
+  left: 58%;
+}
+
+.max .nose {
+  top: 14%;
+  height: 9%;
+  left: 61%;
+  -webkit-animation: wiggle3 8s alternate infinite ease-in-out;
+          animation: wiggle3 8s alternate infinite ease-in-out;
+}
+
+.max .left-eye {
+  height: 3%;
+  top: 14%;
+  left: 55%;
+  -webkit-animation: wiggle2 8s alternate infinite ease-in-out;
+          animation: wiggle2 8s alternate infinite ease-in-out;
+}
+
+.max .right-eye {
+  height: 3%;
+  top: 16%;
+  right: 22%;
 }
 
 .dom {
   position: relative;
-  width: 300px;
-  -webkit-perspective: 15px;
-          perspective: 15px;
-  -webkit-animation: shake 10s alternate infinite ease;
-          animation: shake 10s alternate infinite ease;
+  width: 260px;
+  animation: shake2 10s alternate infinite reverse ease;
 }
 
 .dom img {
@@ -152,8 +273,6 @@ body {
   height: 22%;
   top: 0;
   left: 19%;
-  -webkit-animation: wiggle1 12s alternate infinite ease-in-out;
-          animation: wiggle1 12s alternate infinite ease-in-out;
 }
 
 .dom .lower-lip {
@@ -199,11 +318,9 @@ body {
 
 .ben {
   position: relative;
-  width: 300px;
-  -webkit-perspective: 15px;
-          perspective: 15px;
-  -webkit-animation: shake 10s alternate infinite ease;
-          animation: shake 10s alternate infinite ease;
+  width: 320px;
+  -webkit-animation: shake2 10s alternate infinite ease;
+          animation: shake2 10s alternate infinite ease;
 }
 
 .ben img {
@@ -222,8 +339,6 @@ body {
   height: 22%;
   top: 17%;
   left: 32%;
-  -webkit-animation: wiggle1 12s alternate infinite ease-in-out;
-          animation: wiggle1 12s alternate infinite ease-in-out;
 }
 
 .ben .lower-lip {
@@ -275,9 +390,7 @@ body {
 
 .sean {
   position: relative;
-  width: 300px;
-  -webkit-perspective: 15px;
-          perspective: 15px;
+  width: 280px;
   -webkit-animation: shake 10s alternate infinite ease;
           animation: shake 10s alternate infinite ease;
 }
@@ -298,8 +411,6 @@ body {
   height: 16%;
   top: 19%;
   left: 19%;
-  -webkit-animation: wiggle1 12s alternate infinite ease-in-out;
-          animation: wiggle1 12s alternate infinite ease-in-out;
 }
 
 .sean .lower-lip {
@@ -345,6 +456,65 @@ body {
 }
 
 .sean .body {
+  position: relative;
+  padding-top: 55%;
+}
+
+.greg {
+  position: relative;
+  width: 400px;
+  animation: shake 10s alternate infinite reverse ease;
+}
+
+.greg img {
+  height: auto;
+  width: 100%;
+}
+
+.greg .limb {
+  position: absolute;
+  width: auto;
+  -webkit-animation: wiggle1 6s alternate infinite ease-in-out;
+          animation: wiggle1 6s alternate infinite ease-in-out;
+}
+
+.greg .head {
+  height: 20%;
+  top: 36%;
+  left: 15%;
+  -webkit-animation: wiggle1 12s alternate infinite ease-in-out;
+          animation: wiggle1 12s alternate infinite ease-in-out;
+}
+
+.greg .mouth {
+  height: 2.25%;
+  top: 47%;
+  left: 25%;
+}
+
+.greg .nose {
+  top: 43.5%;
+  height: 3.5%;
+  left: 26%;
+  -webkit-animation: wiggle3 8s alternate infinite ease-in-out;
+          animation: wiggle3 8s alternate infinite ease-in-out;
+}
+
+.greg .left-eye {
+  height: 2%;
+  top: 43.5%;
+  left: 21%;
+  -webkit-animation: wiggle2 8s alternate infinite ease-in-out;
+          animation: wiggle2 8s alternate infinite ease-in-out;
+}
+
+.greg .right-eye {
+  height: 1.5%;
+  top: 42.5%;
+  right: 65%;
+}
+
+.greg .body {
   position: relative;
   padding-top: 55%;
 }
