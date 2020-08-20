@@ -40,7 +40,7 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: none;
   margin: 0 auto;
-  max-width: 720px;
+  max-width: 650px;
   padding: 10px;
 }
 
@@ -161,7 +161,6 @@ img {
 
 table, th, td {
   border: 2px gray inset;
-  background-color: white;
 }
 
 table img {
