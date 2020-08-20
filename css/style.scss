@@ -27,19 +27,29 @@ h2 {
 }
 
 body {
-  background: url('../img/velvet.jpg') pink;
-  background-size: cover;
-  background-position: 50% var(--origin);
-  background-attachment: fixed;
-  transition: background-position 0.1s linear;
   font-family: 'times-ttf-16', sans-serif;
   font-size: 16px;
   -webkit-font-smoothing : none;
+  background: cyan;
+  position: relative;
+}
+article {
   margin: 0 auto;
   max-width: 650px;
   padding: 10px;
 }
-
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -50%;
+  overflow: hidden;
+  background: url('../img/velvet.jpg');
+  z-index: -1;
+  perspective: 20px;
+  transform: translate3d(0%, calc(-0.25 * var(--origin)), 0px);
+}
 img {
   width: 100%;
   max-width: auto;
@@ -125,7 +135,7 @@ th, td {
   display: grid;
   
   .video {
-    width: 450px;
+    max-width: 450px;
 
     h3 {
       margin-top: 0;
@@ -246,7 +256,11 @@ th, td {
   width: 380px;
   perspective: 50px;
   animation: shake2 10s alternate infinite ease;
-
+  @media (min-width: 950px) {
+    &.right {
+      float: none;
+    }
+  }
   img {
     height: auto;
     width: 100%;

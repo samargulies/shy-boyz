@@ -30,18 +30,32 @@ h2 {
 }
 
 body {
-  background: url("../img/velvet.jpg") pink;
-  background-size: cover;
-  background-position: 50% var(--origin);
-  background-attachment: fixed;
-  -webkit-transition: background-position 0.1s linear;
-  transition: background-position 0.1s linear;
   font-family: 'times-ttf-16', sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: none;
+  background: cyan;
+  position: relative;
+}
+
+article {
   margin: 0 auto;
   max-width: 650px;
   padding: 10px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -50%;
+  overflow: hidden;
+  background: url("../img/velvet.jpg");
+  z-index: -1;
+  -webkit-perspective: 20px;
+          perspective: 20px;
+  -webkit-transform: translate3d(0%, calc(-0.25 * var(--origin)), 0px);
+          transform: translate3d(0%, calc(-0.25 * var(--origin)), 0px);
 }
 
 img {
@@ -205,7 +219,7 @@ th, td {
 }
 
 .youtube-videos .video {
-  width: 450px;
+  max-width: 450px;
 }
 
 .youtube-videos .video h3 {
@@ -354,6 +368,12 @@ th, td {
           perspective: 50px;
   -webkit-animation: shake2 10s alternate infinite ease;
           animation: shake2 10s alternate infinite ease;
+}
+
+@media (min-width: 950px) {
+  .ben.right {
+    float: none;
+  }
 }
 
 .ben img {
