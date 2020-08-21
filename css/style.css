@@ -326,12 +326,18 @@ th, td {
 
 .dom {
   position: relative;
-  width: 260px;
+  width: 45%;
   -webkit-perspective: 30px;
           perspective: 30px;
   margin-top: 15%;
   -webkit-animation: shake2 10s alternate infinite ease;
           animation: shake2 10s alternate infinite ease;
+}
+
+@media (min-width: 950px) {
+  .dom {
+    width: 260px;
+  }
 }
 
 .dom img {
@@ -394,7 +400,7 @@ th, td {
 
 .ben {
   position: relative;
-  width: 380px;
+  width: 55%;
   -webkit-perspective: 50px;
           perspective: 50px;
   -webkit-animation: shake2 10s alternate infinite ease;
@@ -402,6 +408,9 @@ th, td {
 }
 
 @media (min-width: 950px) {
+  .ben {
+    width: 380px;
+  }
   .ben.right {
     float: none;
   }
