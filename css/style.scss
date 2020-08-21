@@ -30,7 +30,9 @@ body {
   font-family: 'times-ttf-16', sans-serif;
   font-size: 16px;
   -webkit-font-smoothing : none;
-  background: cyan;
+  background: linear-gradient(60deg, red, yellow, lime, aqua, blue, magenta, red);
+  animation: rotate 10s ease infinite alternate;
+  background-size: 1000% 100%;
   position: relative;
 }
 article {
@@ -45,10 +47,10 @@ article {
   right: 0;
   bottom: -50%;
   overflow: hidden;
-  background: url('../img/velvet.jpg');
+  background: pink url('../img/velvet.jpg');
   z-index: -1;
   perspective: 20px;
-  transform: translate3d(0%, calc(-0.25 * var(--origin)), 0px);
+  transform: translateY(calc(-0.25 * var(--origin)));
 }
 img {
   width: 100%;
@@ -106,9 +108,21 @@ th, td {
   padding: 0.5em;
 }
 
+@keyframes rotate {
+  0%{background-position: 0% 0%;}
+  100%{background-position: 100% 0%;}
+}
+
 .logo {
-  width: 200px;
-  height: auto;
+  mask-image: url('../img/shy-boyz.svg');
+  background: linear-gradient(60deg, red, yellow, lime, aqua, blue, magenta, red);
+  width: 300px;
+  height: 93px;
+  animation: rotate 10s ease infinite alternate;
+  background-size: 1000% 100%;
+  mask-size: cover;
+  text-indent: -999em;
+  margin: 8px auto 16px;
 }
 
 .boy {
