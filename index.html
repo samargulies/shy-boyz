@@ -149,7 +149,7 @@
       });
       function getVideos() {
         let container = document.querySelector('.youtube-videos');
-        fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC7e5tc2uicJweRp6lWbDscg&maxResults=5&order=date&key=AIzaSyAlBbdkOK-rWk-ibc0xXgrgHYy7lGzV-k0').then(response => {
+        fetch('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=5&playlistId=UU7e5tc2uicJweRp6lWbDscg&key=AIzaSyBo9EfoRQpiBSiGcb4DxTQOnQk68jNgncE').then(response => {
           return response.json();
         }).then(data => {
           data.items.forEach(item => {
